@@ -1,0 +1,32 @@
+
+¿COMO CARGAR ARCHIVO funciones.hs?
+
+Crear un archivo llamado funciones.hs
+Abrir terminal desde visual studio code.
+PS D:\Logica-MetodosDiscretos\haskell> █
+PS D:\Logica-MetodosDiscretos\haskell> ghci /* Inicia GHCi(Glasgow Haskell Compiler Interactive) */
+ghci> :load funciones.hs /* Carga 'funciones.hs' en GHCi */
+ghci> main /*Ejecuta el programa de nombre 'main'*/
+
+----------------------------------------------------------------------------
+
+¿COMO DEBE ESTAR COMPUESTO EL ARCHIVO funciones.hs ?
+
+-- Primero, todas las importaciones necesarias
+import Data.List (nub)
+
+-- Luego, las declaraciones de tipos y funciones
+union :: (Eq a) => [a] -> [a] -> [a]
+union xs ys = nub (xs ++ ys)
+
+-- Finalmente, cualquier otro código o función que uses
+main :: IO ()
+main = do
+    let list1 = [1, 2, 3]
+    let list2 = [2, 3, 4]
+    print union list1 list2  -- Esto debería imprimir [1, 2, 3, 4]
+
+----------------------------------------------------------------------------
+
+Forma de hacer un comentario en nombreDeArchivo.hs:
+-- Esto es un comentario
