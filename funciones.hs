@@ -4,8 +4,8 @@
 import Data.List (nub, intersect)
 
 -- DECLARACION DE FUNCIONES
-
--- COMENTARIOS SOBRE EL PRIMER EJERCICIO:
+-------------------------------------------------------------------------------------------------------------------------------------------
+-- COMENTARIOS:
 
 -- Primero se declara la firma de tipo de la funcion, especificando el nombre, que tipos de argumentos toma y que tipo de valor retorna
 
@@ -25,7 +25,7 @@ import Data.List (nub, intersect)
 
 -- 'nub' es una función del módulo Data.List que se utiliza para eliminar elementos duplicados de una lista
 -- 'nub(x ++ y)' combina las listas x e y y luego elimina los duplicados del resultado.
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 -- Ejercicio 1.a).2
 unionConjuntos :: [Int] -> [Int] -> [Int]
 unionConjuntos x y = nub(x ++ y)
@@ -61,8 +61,10 @@ g :: Num a => a -> a
 g x = x + 1
 -- Ejercicio 2.c).2
 funcionCompuesta :: (a -> a) -> (a -> a) -> a -> a
-funcionCompuesta f g x = f (g x)  
+funcionCompuesta f g x = f (g x) 
+
 -- PROGRAMA PRINCIPAL
+
 main :: IO ()
 main = do
 -- Ejercicio 1.[a),b),c),d)].1
@@ -92,3 +94,4 @@ main = do
 -- Ejercicio 2.c).3
     let funcionCompuestaFG_4 = funcionCompuesta f g 4
     print funcionCompuestaFG_4
+    
